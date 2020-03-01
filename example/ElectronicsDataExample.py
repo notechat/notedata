@@ -1,16 +1,12 @@
-# from notedata.dataset.ElectronicsData import ElectronicsData
-#
-# ele = ElectronicsData(data_path='/Users/liangtaoniu/workspace/MyDiary/tmp')
-# ele.init_data()
-
-from __future__ import print_function
-
 import pickle
 import random
 
+from notedata.manage import dataset_manage
+
+dataset = dataset_manage()
 random.seed(1234)
 
-data_root = '/Users/liangtaoniu/workspace/MyDiary/tmp/dataset/electronics'
+data_root = '/Users/liangtaoniu/tmp/dataset/electronics'
 print("read and process data")
 
 with open('{}/raw_data/remap.pkl'.format(data_root), 'rb') as f:

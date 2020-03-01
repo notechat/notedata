@@ -1,15 +1,19 @@
 from notedata.manage import Dataset, DatasetManage
 
 __all__ = ['insert_iris', 'insert_electronics', 'insert_movielens', 'insert_adult_data', 'insert_porto_seguro',
-           'insert_bitly_usagov', 'get_manage']
+           'insert_bitly_usagov', 'dataset_manage', 'dataset_manage2']
 
 
-def get_manage(dataset: DatasetManage):
+def dataset_manage2(dataset: DatasetManage = None):
+    return dataset or DatasetManage()
+
+
+def dataset_manage(dataset: DatasetManage = None):
     return dataset or DatasetManage()
 
 
 def insert_iris(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
     dataset.insert(
         Dataset(name='iris',
                 urls='https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',
@@ -18,7 +22,7 @@ def insert_iris(dataset: DatasetManage = None):
 
 
 def insert_electronics(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
     dataset.insert(
         Dataset(name='electronics-reviews',
                 urls="http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Electronics_5.json.gz",
@@ -32,7 +36,7 @@ def insert_electronics(dataset: DatasetManage = None):
 
 
 def insert_movielens(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
     dataset.insert(Dataset(name='movielens-1m',
                            urls="http://files.grouplens.org/datasets/movielens/ml-1m.zip",
                            path='movielens/ml-1m.zip'))
@@ -57,7 +61,7 @@ def insert_movielens(dataset: DatasetManage = None):
 
 
 def insert_adult_data(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
 
     dataset.insert(
         Dataset(name='adult-train',
@@ -71,7 +75,7 @@ def insert_adult_data(dataset: DatasetManage = None):
 
 
 def insert_porto_seguro(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
 
     dataset.insert(Dataset(name='porto-seguro-train',
                            urls="https://raw.githubusercontent.com/1007530194/data/master/recommendation/data/porto_seguro_train.csv",
@@ -83,7 +87,7 @@ def insert_porto_seguro(dataset: DatasetManage = None):
 
 
 def insert_bitly_usagov(dataset: DatasetManage = None):
-    dataset = get_manage(dataset)
+    dataset = dataset_manage(dataset)
 
     dataset.insert(Dataset(name='bitly-usagov',
                            urls="https://raw.githubusercontent.com/1007530194/data/master/datasets/bitly_usagov/example.txt",
