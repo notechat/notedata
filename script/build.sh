@@ -2,7 +2,7 @@
 
 rm -rf build
 rm -rf dist
-rm -rf notework.egg-info
+rm -rf notedata.egg-info
 
 # 编译
 python setup.py build
@@ -17,12 +17,9 @@ python setup.py bdist_wheel
 # 发布包
 twine upload dist/*
 
-
 rm -rf notedata.egg-info
 rm -rf dist
 rm -rf build
-
-
 
 git pull
 git add -A
