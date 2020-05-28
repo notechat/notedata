@@ -53,7 +53,7 @@ class DatasetManage:
         """.format(self.table_name))
 
     def execute(self, sql):
-        logger.info(sql)
+        info(sql)
         time.sleep(0.1)
         self.conn.commit()
         return self.cursor.execute(sql)
@@ -75,11 +75,11 @@ class DatasetManage:
 
     def insert(self, data: Dataset):
         if self.exists_in_table(data):
-            logger.info("dataset exist, update it.")
+            info("dataset exist, update it.")
             self.update(data)
             return
         else:
-            logger.info("dataset not exist, create it.")
+            info("dataset not exist, create it.")
             self.execute(
                 """insert into {} (name, urls, md5, path, size) values ('{}','{}','{}','{}','{}')""".format(
                     self.table_name, data.name, data.urls, data.md5, data.path, data.size)
@@ -98,7 +98,7 @@ class DatasetManage:
                                                                                                      name)))
 
         if len(file) == 0:
-            logger.info("dataset not exist!(name={})".format(name))
+            info("dataset not exist!(name={})".format(name))
             return None
         file = file[0]
         data = Dataset(id=file[0],

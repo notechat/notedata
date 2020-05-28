@@ -36,7 +36,7 @@ class ElectronicsData:
         self.dataset.download('electronics-meta', overwrite=overwrite)
 
         logging.info("download done")
-        logger.info("begin unzip file")
+        info("begin unzip file")
 
         os.system('cd ' + self.path_root + ' && gzip -d reviews_Electronics_5.json.gz')
         os.system('cd ' + self.path_root + ' && gzip -d meta_Electronics.json.gz')
@@ -91,8 +91,8 @@ class ElectronicsData:
 
         user_count, item_count, cate_count, example_count = \
             len(view_map), len(asin_map), len(cate_map), reviews_df.shape[0]
-        logger.info('user_count: %d\t item_count: %d\t cate_count: %d\t example_count: %d' %
-                    (user_count, item_count, cate_count, example_count))
+        info('user_count: %d\t item_count: %d\t cate_count: %d\t example_count: %d' %
+             (user_count, item_count, cate_count, example_count))
 
         meta_df = meta_df.sort_values('asin')
         meta_df = meta_df.reset_index(drop=True)
