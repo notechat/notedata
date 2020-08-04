@@ -6,8 +6,8 @@ import random
 import numpy as np
 import pandas as pd
 
-from notedata.manage import DatasetManage
-from notedata.manage.library import dataset_manage
+# from notedata.manage import DatasetManage
+# from notedata.manage.library import dataset_manage
 from notetool.tool import log, exists_file
 
 logger = log(__name__)

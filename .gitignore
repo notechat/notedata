@@ -1,3 +1,4 @@
 build/*
 dist/*
 notedata.egg-info/*
+example/download/*
