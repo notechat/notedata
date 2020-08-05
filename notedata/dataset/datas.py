@@ -1,4 +1,3 @@
-import logging
 import os
 import pickle
 import random
@@ -6,8 +5,7 @@ import random
 import numpy as np
 import pandas as pd
 
-# from notedata.manage import DatasetManage
-# from notedata.manage.library import dataset_manage
+from notedata.manage import DatasetManage
 from notetool.tool import log, exists_file
 
 logger = log(__name__)
@@ -16,8 +14,8 @@ logger = log(__name__)
 class ElectronicsData:
     def __init__(self, dataset: DatasetManage = None, data_path=None):
         # 源文件保存目录
-        self.dataset = dataset_manage(dataset)
-        self.path_root = data_path or dataset.path_root + '/electronics/'
+        self.dataset = dataset or DatasetManage()
+        self.path_root = data_path
 
         # 源文件
         self.json_meta = self.path_root + '/meta_Electronics.json'
@@ -35,12 +33,12 @@ class ElectronicsData:
         self.dataset.download('electronics-reviews', overwrite=overwrite)
         self.dataset.download('electronics-meta', overwrite=overwrite)
 
-        logging.info("download done")
-        info("begin unzip file")
+        logger.info("download done")
+        logger.info("begin unzip file")
 
         os.system('cd ' + self.path_root + ' && gzip -d reviews_Electronics_5.json.gz')
         os.system('cd ' + self.path_root + ' && gzip -d meta_Electronics.json.gz')
-        logging.info("unzip done")
+        logger.info("unzip done")
 
     def convert_pd_1(self, overwrite=False):
         def to_df(file_path):
@@ -91,8 +89,8 @@ class ElectronicsData:
 
         user_count, item_count, cate_count, example_count = \
             len(view_map), len(asin_map), len(cate_map), reviews_df.shape[0]
-        info('user_count: %d\t item_count: %d\t cate_count: %d\t example_count: %d' %
-             (user_count, item_count, cate_count, example_count))
+        logger.info('user_count: %d\t item_count: %d\t cate_count: %d\t example_count: %d' %
+                    (user_count, item_count, cate_count, example_count))
 
         meta_df = meta_df.sort_values('asin')
         meta_df = meta_df.reset_index(drop=True)

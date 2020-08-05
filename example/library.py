@@ -11,4 +11,5 @@ def run2():
     dataset.download("coco-annotations_trainval2017", path='./download/coco')
 
 
-run2()
+run1()
+# run2()

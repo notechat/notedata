@@ -22,7 +22,9 @@ def insert_library():
         {'name': 'iris',
          'category': 'dataset',
          'describe': 'iris数据集',
-         'urls': {'source': 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'},
+         'urls': {
+             'source': 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+         },
          "path": 'iris/iris.data'}])
 
     # electronics
@@ -107,6 +109,7 @@ def insert_library():
             "path": 'bitly-usagov/bitly_usagov_train.csv'
         }
     ])
+
     # coco
     lines.extend([
         {
@@ -126,6 +129,26 @@ def insert_library():
                 'lanzou': 'https://wws.lanzous.com/b01hkb86j'
             },
             "path": 'coco/annotations_trainval2017.zip'
+        }
+    ])
+
+    # model-yolo
+    lines.extend([
+        {
+            'name': 'yolov3.weight',
+            'category': 'yolov3模型的权重',
+            'urls': {
+                'lanzou': 'https://wws.lanzous.com/b01hjn3ih'
+            },
+            "path": 'model/yolo/'
+        },
+        {
+            'name': 'yolov4.weight',
+            'category': 'yolov4模型的权重',
+            'urls': {
+                'lanzou': 'https://wws.lanzous.com/b01hjn3yd'
+            },
+            "path": 'model/yolo/'
         }
     ])
 

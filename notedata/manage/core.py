@@ -1,7 +1,7 @@
 import json
 import os
 
-from notedrive.lanzou import download
+from notedrive.lanzou import download as download_lanzou
 from notetool.database import SqliteTable
 
 
@@ -52,6 +52,10 @@ class DatasetManage(SqliteTable):
             path = path or line['path']
 
             if 'lanzou' in line['urls'].keys():
-                download(line['urls']['lanzou'], dir_pwd=path)
+                download_lanzou(line['urls']['lanzou'], dir_pwd=path)
 
         return True
+
+
+def download(name, path=None):
+    DatasetManage().download(name, path=path)

@@ -2,22 +2,17 @@ import pandas as pd
 
 from notedata.dataset.datas import ElectronicsData
 from notedata.manage import DatasetManage
-from notedata.manage.library import insert_adult_data, insert_porto_seguro
-from notedata.manage.library import insert_movielens, insert_bitly_usagov, insert_electronics
 from notetool.tool import log
 
 logger = log(__name__)
 
 
 def get_electronics(dataset: DatasetManage = None):
-    insert_electronics(dataset)
     electronic = ElectronicsData(dataset=dataset)
     electronic.init_data()
 
 
 def get_movielens(dataset: DatasetManage = None):
-    dataset = insert_movielens(dataset)
-
     # data = dataset.download('movielens-100k', overwrite=False)
     data = dataset.download('movielens-1m', overwrite=False)
     # data = dataset.download('movielens-10m', overwrite=False)
@@ -27,7 +22,6 @@ def get_movielens(dataset: DatasetManage = None):
 
 
 def get_adult_data(dataset: DatasetManage = None):
-    dataset = insert_adult_data(dataset)
     data_train = dataset.download('adult-train', overwrite=False)
     data_test = dataset.download('adult-test', overwrite=False)
 
@@ -71,11 +65,9 @@ def get_adult_data(dataset: DatasetManage = None):
 
 
 def get_porto_seguro_data(dataset: DatasetManage = None):
-    insert_porto_seguro(dataset)
     dataset.download('porto-seguro-train')
     dataset.download('porto-seguro-test')
 
 
 def get_bitly_usagov_data(dataset: DatasetManage = None):
-    insert_bitly_usagov(dataset)
     dataset.download('bitly-usagov')
