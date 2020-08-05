@@ -38,6 +38,6 @@ def run3():
     open('../README.md', 'w').write(text)
 
 
-# run1()
+run1()
 # run2()
 run3()
