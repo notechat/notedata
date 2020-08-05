@@ -19,28 +19,33 @@ def insert_library():
     lines = []
     # iris
     lines.extend([
-        {'name': 'iris',
-         'category': 'dataset',
-         'describe': 'iris数据集',
-         'urls': {
-             'source': 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-         },
-         "path": 'iris/iris.data'}])
+        {
+            'name': 'iris',
+            'category': 'dataset',
+            'describe': 'iris数据集',
+            'urls': {
+                'source': 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+            },
+            "path": 'iris/iris.data'}])
 
     # electronics
     lines.extend([
-        {'name': 'electronics-reviews',
-         'category': 'dataset',
-         'urls': {
-             "source": "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Electronics_5.json.gz"
-         },
-         'path': 'electronics/reviews_Electronics_5.json.gz'},
-        {'name': 'electronics-meta',
-         'category': 'dataset',
-         'urls': {
-             "source": "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/meta_Electronics.json.gz"
-         },
-         'path': 'electronics/meta_Electronics.json.gz'}])
+        {
+            'name': 'electronics-reviews',
+            'category': 'dataset',
+            'describe': 'Amazon评论数据',
+            'urls': {
+                "source": "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Electronics_5.json.gz"
+            },
+            'path': 'electronics/reviews_Electronics_5.json.gz'},
+        {
+            'name': 'electronics-meta',
+            'category': 'dataset',
+            'describe': 'Amazon评论数据',
+            'urls': {
+                "source": "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/meta_Electronics.json.gz"
+            },
+            'path': 'electronics/meta_Electronics.json.gz'}])
 
     # movielens
     lines.extend([
@@ -52,6 +57,7 @@ def insert_library():
                 "lanzou": "https://wws.lanzous.com/iyykCfbi64j"
             },
             'path': 'movielens/ml-100k.zip',
+            'describe': 'MovieLens数据集包含多个用户对多部电影的评级数据,也包括电影元数据信息和用户属性信息',
             'md5': '0e33842e24a9c977be4e0107933c0723'
         },
         {
@@ -62,6 +68,7 @@ def insert_library():
                 "lanzou": "https://wws.lanzous.com/ihoSUfbi65a"
             },
             'path': 'movielens/ml-1m.zip',
+            'describe': 'MovieLens数据集包含多个用户对多部电影的评级数据,也包括电影元数据信息和用户属性信息',
             'md5': 'c4d9eecfca2ab87c1945afe126590906'
         },
         {
@@ -72,11 +79,13 @@ def insert_library():
                 "lanzou": "https://wws.lanzous.com/iXvEmfbi6di"
             },
             'path': 'movielens/ml-10m.zip',
+            'describe': 'MovieLens数据集包含多个用户对多部电影的评级数据,也包括电影元数据信息和用户属性信息',
             'md5': 'ce571fd55effeba0271552578f2648bd'
         },
         {
             'category': 'dataset',
             'name': 'movielens-20m',
+            'describe': 'MovieLens数据集包含多个用户对多部电影的评级数据,也包括电影元数据信息和用户属性信息',
             'urls': {
                 "source": "http://files.grouplens.org/datasets/movielens/ml-20m.zip",
                 "lanzou": "https://wws.lanzous.com/b01hkt17g"
@@ -92,6 +101,7 @@ def insert_library():
                 "lanzou": "https://wws.lanzous.com/b01hkt24j"
             },
             'path': 'movielens/ml-25m.zip',
+            'describe': 'MovieLens数据集包含多个用户对多部电影的评级数据,也包括电影元数据信息和用户属性信息',
             'md5': '6b51fb2759a8657d3bfcbfc42b592ada'
         }])
 
@@ -102,13 +112,15 @@ def insert_library():
             'urls': {
                 'source': 'https://raw.githubusercontent.com/1007530194/data/master/recommendation/data/adult.data.txt'
             },
-            "path": 'adult-data/adult.train.txt'
+            "path": 'adult-data/adult.train.txt',
+            'describe': '',
         }, {
             'name': 'adult-test', 'category': 'dataset',
             'urls': {
                 'source': 'https://raw.githubusercontent.com/1007530194/data/master/recommendation/data/adult.test.txt'
             },
-            "path": 'adult-data/adult.test.txt'
+            "path": 'adult-data/adult.test.txt',
+            'describe': '',
         }
     ])
 
@@ -119,13 +131,15 @@ def insert_library():
             'urls': {
                 'source': 'https://raw.githubusercontent.com/1007530194/data/master/recommendation/data/porto_seguro_train.csv'
             },
-            "path": 'porto-seguro/porto_seguro_train.csv'
+            "path": 'porto-seguro/porto_seguro_train.csv',
+            'describe': '',
         }, {
             'name': 'porto-seguro-test', 'category': 'dataset',
             'urls': {
                 'source': 'https://raw.githubusercontent.com/1007530194/data/master/recommendation/data/porto_seguro_test.csv'
             },
-            "path": 'porto-seguro/porto_seguro_test.csv'
+            "path": 'porto-seguro/porto_seguro_test.csv',
+            'describe': '',
         }
     ])
 
@@ -136,7 +150,8 @@ def insert_library():
             'urls': {
                 'source': 'https://raw.githubusercontent.com/1007530194/data/master/datasets/bitly_usagov/example.txt'
             },
-            "path": 'bitly-usagov/bitly_usagov_train.csv'
+            "path": 'bitly-usagov/bitly_usagov_train.csv',
+            'describe': '',
         }
     ])
 
@@ -149,7 +164,8 @@ def insert_library():
                 'source': 'http://images.cocodataset.org/zips/val2017.zip',
                 'lanzou': 'https://wws.lanzous.com/b01hkb8fi'
             },
-            "path": 'coco/val2017.zip'
+            "path": 'coco/val2017.zip',
+            'describe': '微软发布的 COCO 数据库是一个大型图像数据集, 专为对象检测、分割、人体关键点检测、语义分割和字幕生成而设计',
         },
         {
             'name': 'coco-annotations_trainval2017',
@@ -158,7 +174,8 @@ def insert_library():
                 'source': "http://images.cocodataset.org/annotations/annotations_trainval2017.zip",
                 'lanzou': 'https://wws.lanzous.com/b01hkb86j'
             },
-            "path": 'coco/annotations_trainval2017.zip'
+            "path": 'coco/annotations_trainval2017.zip',
+            'describe': '微软发布的 COCO 数据库是一个大型图像数据集, 专为对象检测、分割、人体关键点检测、语义分割和字幕生成而设计',
         }
     ])
 
