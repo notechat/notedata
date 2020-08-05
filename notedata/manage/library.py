@@ -166,19 +166,21 @@ def insert_library():
     lines.extend([
         {
             'name': 'yolov3.weight',
-            'category': 'yolov3模型的权重',
+            'category': 'model',
             'urls': {
                 'lanzou': 'https://wws.lanzous.com/b01hjn3ih'
             },
-            "path": 'model/yolo/'
+            "path": 'model/yolo/',
+            'describe': 'yolov3模型的权重',
         },
         {
             'name': 'yolov4.weight',
-            'category': 'yolov4模型的权重',
+            'category': 'model',
             'urls': {
                 'lanzou': 'https://wws.lanzous.com/b01hjn3yd'
             },
-            "path": 'model/yolo/'
+            "path": 'model/yolo/',
+            'describe': 'yolov4模型的权重',
         }
     ])
 
