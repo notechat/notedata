@@ -44,26 +44,56 @@ def insert_library():
 
     # movielens
     lines.extend([
-        {'name': 'movielens-100k', 'category': 'dataset',
-         'urls': {"source": "http://files.grouplens.org/datasets/movielens/ml-100k.zip"},
-         'path': 'movielens/ml-100k.zip'
-         },
-        {'name': 'movielens-1m', 'category': 'dataset',
-         'urls': {"source": "http://files.grouplens.org/datasets/movielens/ml-1m.zip"},
-         'path': 'movielens/ml-1m.zip'
-         },
-        {'name': 'movielens-10m', 'category': 'dataset',
-         'urls': {"source": "http://files.grouplens.org/datasets/movielens/ml-10m.zip"},
-         'path': 'movielens/ml-10m.zip'
-         },
-        {'name': 'movielens-20m', 'category': 'dataset',
-         'urls': {"source": "http://files.grouplens.org/datasets/movielens/ml-20m.zip"},
-         'path': 'movielens/ml-20m.zip'
-         },
-        {'name': 'movielens-25m', 'category': 'dataset',
-         'urls': {"source": "http://files.grouplens.org/datasets/movielens/ml-25m.zip"},
-         'path': 'movielens/ml-25m.zip'
-         }])
+        {
+            'category': 'dataset',
+            'name': 'movielens-100k',
+            'urls': {
+                "source": "http://files.grouplens.org/datasets/movielens/ml-100k.zip",
+                "lanzou": "https://wws.lanzous.com/iyykCfbi64j"
+            },
+            'path': 'movielens/ml-100k.zip',
+            'md5': '0e33842e24a9c977be4e0107933c0723'
+        },
+        {
+            'category': 'dataset',
+            'name': 'movielens-1m',
+            'urls': {
+                "source": "http://files.grouplens.org/datasets/movielens/ml-1m.zip",
+                "lanzou": "https://wws.lanzous.com/ihoSUfbi65a"
+            },
+            'path': 'movielens/ml-1m.zip',
+            'md5': 'c4d9eecfca2ab87c1945afe126590906'
+        },
+        {
+            'category': 'dataset',
+            'name': 'movielens-10m',
+            'urls': {
+                "source": "http://files.grouplens.org/datasets/movielens/ml-10m.zip",
+                "lanzou": "https://wws.lanzous.com/iXvEmfbi6di"
+            },
+            'path': 'movielens/ml-10m.zip',
+            'md5': 'ce571fd55effeba0271552578f2648bd'
+        },
+        {
+            'category': 'dataset',
+            'name': 'movielens-20m',
+            'urls': {
+                "source": "http://files.grouplens.org/datasets/movielens/ml-20m.zip",
+                "lanzou": "https://wws.lanzous.com/b01hkt17g"
+            },
+            'path': 'movielens/ml-20m.zip',
+            'md5': 'cd245b17a1ae2cc31bb14903e1204af3'
+        },
+        {
+            'category': 'dataset',
+            'name': 'movielens-25m',
+            'urls': {
+                "source": "http://files.grouplens.org/datasets/movielens/ml-25m.zip",
+                "lanzou": "https://wws.lanzous.com/b01hkt24j"
+            },
+            'path': 'movielens/ml-25m.zip',
+            'md5': '6b51fb2759a8657d3bfcbfc42b592ada'
+        }])
 
     # adult_data
     lines.extend([
