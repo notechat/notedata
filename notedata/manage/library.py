@@ -180,26 +180,39 @@ def insert_library():
     ])
 
     # model-yolo
-    lines.extend([
-        {
-            'name': 'yolov3.weight',
-            'category': 'model',
-            'urls': {
-                'lanzou': 'https://wws.lanzous.com/b01hjn3ih'
-            },
-            "path": 'model/yolo/',
-            'describe': 'yolov3模型的权重',
+    lines.extend([{
+        'name': 'yolov3.weight',
+        'category': 'model',
+        'urls': {
+            'lanzou': 'https://wws.lanzous.com/b01hjn3ih'
         },
-        {
-            'name': 'yolov4.weight',
-            'category': 'model',
-            'urls': {
-                'lanzou': 'https://wws.lanzous.com/b01hjn3yd'
-            },
-            "path": 'model/yolo/',
-            'describe': 'yolov4模型的权重',
-        }
-    ])
+        "path": 'model/yolo/',
+        'describe': 'yolov3模型的权重',
+    }, {
+        'name': 'yolov3.h5',
+        'category': 'model',
+        'urls': {
+            'lanzou': 'https://wws.lanzous.com/b01hjn3aj'
+        },
+        "path": 'model/yolo/',
+        'describe': 'yolov3模型的权重',
+    }, {
+        'name': 'yolov4.weight',
+        'category': 'model',
+        'urls': {
+            'lanzou': 'https://wws.lanzous.com/b01hjn3yd'
+        },
+        "path": 'model/yolo/',
+        'describe': 'yolov4模型的权重',
+    }, {
+        'name': 'yolov4-416.h5',
+        'category': 'model',
+        'urls': {
+            'lanzou': 'https://wws.lanzous.com/b01hl9lej'
+        },
+        "path": 'model/yolo/',
+        'describe': 'yolov4模型的权重',
+    }])
 
     dataset = DatasetManage()
     dataset.create()

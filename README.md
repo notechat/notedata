@@ -24,6 +24,8 @@
 |14|dataset|coco-annotations_trainval2017|大型图像数据集, 用于对象检测、分割、人体关键点检测、语义分割和字幕生成|[官网链接](http://images.cocodataset.org/annotations/annotations_trainval2017.zip)|[蓝奏链接](https://wws.lanzous.com/b01hkb86j)|
 |15|model|yolov3.weight|yolov3模型的权重|暂无|[蓝奏链接](https://wws.lanzous.com/b01hjn3ih)|
 |16|model|yolov4.weight|yolov4模型的权重|暂无|[蓝奏链接](https://wws.lanzous.com/b01hjn3yd)|
+|17|model|yolov3.h5|yolov3模型的权重|暂无|[蓝奏链接](https://wws.lanzous.com/b01hjn3aj)|
+|18|model|yolov4-416.h5|yolov4模型的权重|暂无|[蓝奏链接](https://wws.lanzous.com/b01hl9lej)|
 
 
 注：蓝奏无法上传大于100MB的数据，将一个数据拆分为多个文件上传，必须用[notedrive](https://github.com/notechats/notedrive) 来下载
