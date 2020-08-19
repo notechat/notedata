@@ -11,7 +11,7 @@ class DatasetManage(SqliteTable):
             db_path = os.path.abspath(os.path.dirname(__file__)) + '/dataset.db'
 
         super(DatasetManage, self).__init__(db_path=db_path, table_name=table_name, *args, **kwargs)
-        self.columns = ['id', 'category', 'name', 'describe', 'urls', 'md5', 'path', 'size']
+        self.columns = ['name', 'category', 'describe', 'urls', 'md5', 'path', 'size']
 
     def create(self):
         self.execute("""
